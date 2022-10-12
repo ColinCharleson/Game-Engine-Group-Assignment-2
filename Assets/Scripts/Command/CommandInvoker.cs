@@ -42,7 +42,7 @@ public class CommandInvoker : MonoBehaviour
                 commandHistory[counter].Undo();
 			}
 		}
-	}
+	} 
 
     // Update is called once per frame
     void Update()

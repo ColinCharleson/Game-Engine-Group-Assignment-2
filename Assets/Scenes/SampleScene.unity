@@ -190,8 +190,9 @@ MonoBehaviour:
   editorCamera: {fileID: 1049977552}
   editorMode: 0
   instantiated: 0
-  prefab1: {fileID: 9148442474957000466, guid: 76886c46c0c906546b001b35499c880b, type: 3}
-  prefab2: {fileID: 9024943672977114411, guid: 743402f7af7cda944907488481b31fe6, type: 3}
+  prefab1: {fileID: 4806974502236086658, guid: b042047ace5562d4a9a76c0511909982, type: 3}
+  prefab2: {fileID: 1051096842656499690, guid: e1f0ae5552f38d247bce629a04fedab6, type: 3}
+  prefab3: {fileID: 1888612328206817935, guid: 7fed7ad790bcfe0429a127a344480be7, type: 3}
   item: {fileID: 0}
 --- !u!114 &308285222
 MonoBehaviour:
@@ -258,7 +259,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   editorUI: {fileID: 1096134155}
-  gameUI: {fileID: 0}
 --- !u!1 &379675309
 GameObject:
   m_ObjectHideFlags: 0

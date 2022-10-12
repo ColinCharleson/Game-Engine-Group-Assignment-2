@@ -165,6 +165,15 @@
                     "initialStateCheck": false
                 },
                 {
+                    "name": "AddItem3",
+                    "type": "Button",
+                    "id": "4f846354-96e7-428a-a659-4639f3c9a050",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
                     "name": "DropItem",
                     "type": "Button",
                     "id": "92b19a23-a567-4247-9eb5-f3690817a7f8",
@@ -256,6 +265,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Undo",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7b97e2b7-16df-4e13-80aa-6c104ffc24e7",
+                    "path": "<Keyboard>/3",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "AddItem3",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
