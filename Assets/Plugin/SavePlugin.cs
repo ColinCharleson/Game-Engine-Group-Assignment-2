@@ -6,19 +6,13 @@ using System.Runtime.InteropServices;
 public class SavePlugin : MonoBehaviour
 {
     [DllImport("Plugin")]
-    private static extern int GetID();
-
-    [DllImport("Plugin")]
-    private static extern void SetID(int id);
-
-    [DllImport("Plugin")]
     private static extern Vector3 GetPosition();
 
     [DllImport("Plugin")]
     private static extern void SetPosition(float x, float y, float z);
 
     [DllImport("Plugin")]
-    private static extern void SaveToFile(int id, float x, float y, float z);
+    private static extern void SaveToFile(float x, float y, float z);
 
     [DllImport("Plugin")]
     private static extern void StartWriting(string fileName);
@@ -34,35 +28,37 @@ public class SavePlugin : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        inputAction = PlayerInputController.controller.inputAction;
+       inputAction = PlayerInputController.controller.inputAction;
 
-        inputAction.Editor.Save.performed += cntxt => SaveItems();
+       inputAction.Editor.Save.performed += cntxt => SavePosition();
 
         m_Path = Application.dataPath;
         fn = m_Path + "/save.txt";
-        Debug.Log(fn);    
     }
 
-    void SaveItems()
+    void SavePosition()
     {
+        Debug.Log(fn);
         StartWriting(fn);
-        foreach(GameObject obj in GameObject.FindGameObjectsWithTag("SpikeBall"))
-        {
-            if(obj.name.Contains("SpikyBall1"))
-            {
-                SaveToFile(1, obj.transform.position.x, obj.transform.position.y, obj.transform.position.z);
-            }
-            else
-            {
-                SaveToFile(2, obj.transform.position.x, obj.transform.position.y, obj.transform.position.z);
-            }
-        }
+        GameObject obj = GameObject.FindGameObjectWithTag("Player");
+
+        SaveToFile(obj.transform.position.x, obj.transform.position.y, obj.transform.position.z);
+
+        EndWriting();
+    } 
+    void LoadPosition()
+    {
+        Debug.Log(fn);
+        StartWriting(fn);
+        GameObject obj = GameObject.FindGameObjectWithTag("Player");
+
+        SaveToFile(obj.transform.position.x, obj.transform.position.y, obj.transform.position.z);
+
         EndWriting();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
     }
 }
