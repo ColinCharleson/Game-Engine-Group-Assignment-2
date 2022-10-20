@@ -103,10 +103,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1546728913521052061}
-  - component: {fileID: 1368439789547875952}
-  - component: {fileID: 1368439789547875955}
-  - component: {fileID: 1368439789547875957}
-  - component: {fileID: 1368439789547875954}
   m_Layer: 0
   m_Name: Monster
   m_TagString: Enemy
@@ -122,7 +118,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2178833391222248231}
   m_LocalRotation: {x: -0, y: 0.8385906, z: -0, w: -0.54476213}
-  m_LocalPosition: {x: 20.764, y: 0.87, z: 19.402}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.7917501, y: 1.79175, z: 1.7917501}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -134,88 +130,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: -113.983, z: 0}
---- !u!54 &1368439789547875952
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2178833391222248231}
-  serializedVersion: 2
-  m_Mass: 5
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!136 &1368439789547875955
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2178833391222248231}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.7279092
-  m_Height: 1.6189115
-  m_Direction: 1
-  m_Center: {x: 0.026208876, y: 0.71910685, z: -4.3350545e-11}
---- !u!195 &1368439789547875957
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2178833391222248231}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 3.5
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 2
-  m_BaseOffset: 0
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
---- !u!114 &1368439789547875954
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2178833391222248231}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0aebc67fde3d26d4c84134111190bfff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  agent: {fileID: 1368439789547875957}
-  player: {fileID: 0}
-  whatIsGround:
-    serializedVersion: 2
-    m_Bits: 64
-  whatIsPlayer:
-    serializedVersion: 2
-    m_Bits: 8
-  health: 100
-  walkPoint: {x: 0, y: 0, z: 0}
-  walkPointRange: 15
-  timeBetweenAttacks: 1
-  projectile: {fileID: 919375599084722502, guid: 714fa3661f04ff34eb615c451f49796d, type: 3}
-  projectilePos: {fileID: 1368439790177580490}
-  sightRange: 15
-  attackRange: 13
-  playerInSightRange: 0
-  playerInAttackRange: 0
 --- !u!1 &2789208560951131745
 GameObject:
   m_ObjectHideFlags: 0
