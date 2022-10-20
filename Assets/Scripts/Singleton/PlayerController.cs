@@ -10,7 +10,6 @@ public class PlayerController : MonoBehaviour
 
 	public PlayerAction inputAction;
 
-	public int health = 3;
 
 	//Player Camera
 	private Camera playerCamera;
@@ -102,8 +101,6 @@ public class PlayerController : MonoBehaviour
 		Vector3 m = new Vector3(move.x, 0, move.y);
 		AnimateRun(m);
 
-		if (health <= 0)
-			Destroy(gameObject);
 	}
 	void AnimateRun(Vector3 m)
 	{

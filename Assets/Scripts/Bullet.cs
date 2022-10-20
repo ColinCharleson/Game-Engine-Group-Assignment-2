@@ -12,9 +12,9 @@ public class Bullet : MonoBehaviour
 
 		if (other.collider.tag == "Player")
 		{
-			if (other.gameObject.GetComponent<PlayerController>().health >= 1)
+			if (PlayerHealthManager.instance.health >= 1)
 			{
-				other.gameObject.GetComponent<PlayerController>().health -= 1;
+				PlayerHealthManager.instance.health -= 1;
 			}
 			else
 			{
