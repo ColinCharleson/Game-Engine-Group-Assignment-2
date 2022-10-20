@@ -36,7 +36,7 @@ public class SavePlugin : MonoBehaviour
         fn = m_Path + "/save.txt";
     }
 
-    void SavePosition()
+    public void SavePosition()
     {
         Debug.Log(fn);
         StartWriting(fn);
@@ -46,16 +46,6 @@ public class SavePlugin : MonoBehaviour
 
         EndWriting();
     } 
-    void LoadPosition()
-    {
-        Debug.Log(fn);
-        StartWriting(fn);
-        GameObject obj = GameObject.FindGameObjectWithTag("Player");
-
-        SaveToFile(obj.transform.position.x, obj.transform.position.y, obj.transform.position.z);
-
-        EndWriting();
-    }
 
     // Update is called once per frame
     void Update()
