@@ -21,6 +21,8 @@ public class PlayerController : MonoBehaviour
 	Vector2 rotation;
 	private float speed = 5f;
 
+
+
 	//Jumping variables
 	private Rigidbody rb;
 	private float distanceToGround;
@@ -71,6 +73,7 @@ public class PlayerController : MonoBehaviour
 			isGrounded = false;
 		}
 	}
+
 	private void Shoot()
 	{
 		if (EditorManager.instance.editorMode == false)
