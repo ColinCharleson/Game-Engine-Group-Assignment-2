@@ -9,23 +9,19 @@ public class ItemPickUpController : MonoBehaviour
 
     public PlayerController player;
     int count = 0;
-    private void Start()
+
+    private void OnEnable()
     {
         foreach (var health in item)
             health.OnItemPickUp += Health;
     }
 
-   
     void Health(ItemPickUps health)
     {
         count += 1;
-        Debug.Log("Health Picked Up:");
-        Debug.Log(count);
         player.health += 1;
-        Destroy(health);
-
-        
-         
+        Debug.Log("Health Picked Up:" + count);
+        Debug.Log("Current Health:" + player.health);
     }
 
 }

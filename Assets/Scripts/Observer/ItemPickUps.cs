@@ -17,6 +17,7 @@ public class ItemPickUps : MonoBehaviour
     void Health()
     {
         OnItemPickUp?.Invoke(this);
+        Destroy(this.gameObject);
     }
 }
 
