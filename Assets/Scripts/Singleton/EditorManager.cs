@@ -20,8 +20,8 @@ public class EditorManager : MonoBehaviour
 	public GameObject prefab1;
 	public GameObject prefab2;
 	public GameObject prefab3;
+	public GameObject prefab4;
 
-	Subject subject = new Subject();
 
 	public GameObject item;
 
@@ -38,6 +38,7 @@ public class EditorManager : MonoBehaviour
 		inputAction.Editor.AddItem1.performed += cntxt => AddItem(1);
 		inputAction.Editor.AddItem2.performed += cntxt => AddItem(2);
 		inputAction.Editor.AddItem3.performed += cntxt => AddItem(3);
+		inputAction.Editor.AddItem4.performed += cntxt => AddItem(4);
 		inputAction.Editor.DropItem.performed += cntxt => DropItem();
 
 		mainCamera.enabled = true;
@@ -68,17 +69,17 @@ public class EditorManager : MonoBehaviour
 				case 1:
 					item = Instantiate(prefab1);
 
-					// SpikeBall spike1 = new SpikeBall(item, new GreenMat());
-					// subject.AddObserver(spike1);
 					break;
 				case 2:
 					item = Instantiate(prefab2);
 
-					// SpikeBall spike2 = new SpikeBall(item, new YellowMat());
-					// subject.AddObserver(spike2);
 					break;
 				case 3:
 					item = Instantiate(prefab3);
+
+					break;
+				case 4:
+					item = Instantiate(prefab4);
 
 					break;
 				default:

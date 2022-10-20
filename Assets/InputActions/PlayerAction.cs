@@ -196,6 +196,15 @@ public partial class @PlayerAction : IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
+                    ""name"": ""AddItem4"",
+                    ""type"": ""Button"",
+                    ""id"": ""97acb8e6-5d92-463b-8f87-db884901505b"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
                     ""name"": ""DropItem"",
                     ""type"": ""Button"",
                     ""id"": ""92b19a23-a567-4247-9eb5-f3690817a7f8"",
@@ -300,6 +309,17 @@ public partial class @PlayerAction : IInputActionCollection2, IDisposable
                     ""action"": ""AddItem3"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""1e228ef0-71a9-4f41-bba6-d563777b53b1"",
+                    ""path"": ""<Keyboard>/4"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""AddItem4"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -318,6 +338,7 @@ public partial class @PlayerAction : IInputActionCollection2, IDisposable
         m_Editor_AddItem1 = m_Editor.FindAction("AddItem1", throwIfNotFound: true);
         m_Editor_AddItem2 = m_Editor.FindAction("AddItem2", throwIfNotFound: true);
         m_Editor_AddItem3 = m_Editor.FindAction("AddItem3", throwIfNotFound: true);
+        m_Editor_AddItem4 = m_Editor.FindAction("AddItem4", throwIfNotFound: true);
         m_Editor_DropItem = m_Editor.FindAction("DropItem", throwIfNotFound: true);
         m_Editor_Save = m_Editor.FindAction("Save", throwIfNotFound: true);
         m_Editor_Undo = m_Editor.FindAction("Undo", throwIfNotFound: true);
@@ -441,6 +462,7 @@ public partial class @PlayerAction : IInputActionCollection2, IDisposable
     private readonly InputAction m_Editor_AddItem1;
     private readonly InputAction m_Editor_AddItem2;
     private readonly InputAction m_Editor_AddItem3;
+    private readonly InputAction m_Editor_AddItem4;
     private readonly InputAction m_Editor_DropItem;
     private readonly InputAction m_Editor_Save;
     private readonly InputAction m_Editor_Undo;
@@ -452,6 +474,7 @@ public partial class @PlayerAction : IInputActionCollection2, IDisposable
         public InputAction @AddItem1 => m_Wrapper.m_Editor_AddItem1;
         public InputAction @AddItem2 => m_Wrapper.m_Editor_AddItem2;
         public InputAction @AddItem3 => m_Wrapper.m_Editor_AddItem3;
+        public InputAction @AddItem4 => m_Wrapper.m_Editor_AddItem4;
         public InputAction @DropItem => m_Wrapper.m_Editor_DropItem;
         public InputAction @Save => m_Wrapper.m_Editor_Save;
         public InputAction @Undo => m_Wrapper.m_Editor_Undo;
@@ -476,6 +499,9 @@ public partial class @PlayerAction : IInputActionCollection2, IDisposable
                 @AddItem3.started -= m_Wrapper.m_EditorActionsCallbackInterface.OnAddItem3;
                 @AddItem3.performed -= m_Wrapper.m_EditorActionsCallbackInterface.OnAddItem3;
                 @AddItem3.canceled -= m_Wrapper.m_EditorActionsCallbackInterface.OnAddItem3;
+                @AddItem4.started -= m_Wrapper.m_EditorActionsCallbackInterface.OnAddItem4;
+                @AddItem4.performed -= m_Wrapper.m_EditorActionsCallbackInterface.OnAddItem4;
+                @AddItem4.canceled -= m_Wrapper.m_EditorActionsCallbackInterface.OnAddItem4;
                 @DropItem.started -= m_Wrapper.m_EditorActionsCallbackInterface.OnDropItem;
                 @DropItem.performed -= m_Wrapper.m_EditorActionsCallbackInterface.OnDropItem;
                 @DropItem.canceled -= m_Wrapper.m_EditorActionsCallbackInterface.OnDropItem;
@@ -501,6 +527,9 @@ public partial class @PlayerAction : IInputActionCollection2, IDisposable
                 @AddItem3.started += instance.OnAddItem3;
                 @AddItem3.performed += instance.OnAddItem3;
                 @AddItem3.canceled += instance.OnAddItem3;
+                @AddItem4.started += instance.OnAddItem4;
+                @AddItem4.performed += instance.OnAddItem4;
+                @AddItem4.canceled += instance.OnAddItem4;
                 @DropItem.started += instance.OnDropItem;
                 @DropItem.performed += instance.OnDropItem;
                 @DropItem.canceled += instance.OnDropItem;
@@ -527,6 +556,7 @@ public partial class @PlayerAction : IInputActionCollection2, IDisposable
         void OnAddItem1(InputAction.CallbackContext context);
         void OnAddItem2(InputAction.CallbackContext context);
         void OnAddItem3(InputAction.CallbackContext context);
+        void OnAddItem4(InputAction.CallbackContext context);
         void OnDropItem(InputAction.CallbackContext context);
         void OnSave(InputAction.CallbackContext context);
         void OnUndo(InputAction.CallbackContext context);

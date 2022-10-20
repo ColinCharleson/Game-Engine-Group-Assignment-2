@@ -20,6 +20,6 @@ public class PlaceItemCommand : ICommand
 
 	public void Undo()
 	{
-		ItemPlacer.RemoveItem(position);
+		 ItemPlacer.RemoveItem(position);
 	}
 }
