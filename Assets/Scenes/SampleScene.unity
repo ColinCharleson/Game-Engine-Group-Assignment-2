@@ -3303,7 +3303,7 @@ MonoBehaviour:
   timeBetweenAttacks: 0
   projectile: {fileID: 0}
   projectilePos: {fileID: 0}
-  sightRange: 1
+  sightRange: 6
   attackRange: 3
   playerInSightRange: 0
   playerInAttackRange: 0
