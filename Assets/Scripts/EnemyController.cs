@@ -12,6 +12,9 @@ public class EnemyController : MonoBehaviour
 
     public float health;
 
+    private EnemyState enemyState = EnemyState.patrol;
+
+
     //Patroling
     public Vector3 walkPoint;
     bool walkPointSet;
@@ -31,17 +34,66 @@ public class EnemyController : MonoBehaviour
     {
         player = GameObject.Find("Player").transform;
         agent = GetComponent<NavMeshAgent>();
+
+          //Check for sight and attack range
+      
     }
 
     private void Update()
     {
-        //Check for sight and attack range
         playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
         playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);
 
-        if (!playerInSightRange && !playerInAttackRange) Patroling();
-        if (playerInSightRange && !playerInAttackRange) ChasePlayer();
-        if (playerInAttackRange && playerInSightRange) AttackPlayer();
+        switch (enemyState)
+        {
+
+         case EnemyState.patrol:
+            Patroling();
+            
+                if (playerInSightRange && !playerInAttackRange)
+                {
+                    enemyState = EnemyState.chase;
+                }
+               
+                if(!playerInSightRange && playerInAttackRange)
+                {
+                    enemyState = EnemyState.attack;
+                }
+                break;
+
+        case EnemyState.chase:
+            ChasePlayer();
+                if (!playerInSightRange && !playerInAttackRange)
+                {
+                    enemyState = EnemyState.patrol;
+                }
+
+                if (!playerInSightRange && playerInAttackRange)
+                {
+                    enemyState = EnemyState.attack;
+                }
+
+                break;
+
+           case EnemyState.attack:
+                AttackPlayer();
+
+                if (!playerInSightRange && !playerInAttackRange)
+                {
+                    enemyState = EnemyState.patrol;
+                }
+                else if (playerInSightRange && !playerInAttackRange)
+                {
+                    enemyState = EnemyState.chase;
+                }
+
+                break;
+
+            default:
+
+             break;
+    }
+        
     }
 
     private void Patroling()
@@ -115,5 +167,12 @@ public class EnemyController : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, attackRange);
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, sightRange);
+    }
+
+    public enum EnemyState
+    {
+        chase,
+        attack,
+        patrol
     }
 }
