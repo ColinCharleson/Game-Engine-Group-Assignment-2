@@ -70,6 +70,8 @@ public class PlayerController : MonoBehaviour
 		{
 			rb.velocity = new Vector2(rb.velocity.x, jumpForce);
 			isGrounded = false;
+
+			AchievementManager.achievement.jumpTimes += 1;
 		}
 	}
 

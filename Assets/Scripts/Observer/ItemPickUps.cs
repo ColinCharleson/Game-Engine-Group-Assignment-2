@@ -16,6 +16,7 @@ public class ItemPickUps : MonoBehaviour
     }
     void Health()
     {
+        AchievementManager.achievement.fruitCollected += 1;
         OnItemPickUp?.Invoke(this);
         Destroy(this.gameObject);
     }

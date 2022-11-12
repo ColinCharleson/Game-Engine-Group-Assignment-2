@@ -26,6 +26,7 @@ public class Bullet : MonoBehaviour
 		else if (other.collider.tag == "Enemy")
 		{
 			Destroy(other.gameObject);
+			AchievementManager.achievement.enemiesKilled += 1;
 		}
 	}
 
