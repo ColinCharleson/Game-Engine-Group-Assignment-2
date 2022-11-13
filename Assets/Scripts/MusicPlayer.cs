@@ -21,6 +21,5 @@ public class MusicPlayer : MonoBehaviour
         musicVolume = volume;
     }
 
-
 }
 
