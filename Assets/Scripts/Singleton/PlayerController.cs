@@ -72,6 +72,9 @@ public class PlayerController : MonoBehaviour
 			isGrounded = false;
 
 			AchievementManager.achievement.jumpTimes += 1;
+
+			if (TutorialManager.instance.dQuest == true)
+				TutorialManager.instance.jumpQuest = true;
 		}
 	}
 
@@ -82,11 +85,37 @@ public class PlayerController : MonoBehaviour
 			Rigidbody bulletRb = Instantiate(bullet, bulletPos.position, Quaternion.identity).GetComponent<Rigidbody>();
 			bulletRb.AddForce(transform.forward * 320f, ForceMode.Impulse);
 			bulletRb.AddForce(transform.up, ForceMode.Impulse);
+
+			if (TutorialManager.instance.jumpQuest == true)
+				TutorialManager.instance.clickQuest = true;
 		}
 	}
 	// Update is called once per frame
 	void Update()
 	{
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+			TutorialManager.instance.wQuest = true;
+        }
+
+		if (Input.GetKeyDown(KeyCode.A))
+		{
+			if(TutorialManager.instance.wQuest == true)
+				TutorialManager.instance.aQuest = true;
+		}
+
+		if (Input.GetKeyDown(KeyCode.S))
+		{
+			if (TutorialManager.instance.aQuest == true)
+				TutorialManager.instance.sQuest = true;
+		}
+
+		if (Input.GetKeyDown(KeyCode.D))
+		{
+			if (TutorialManager.instance.sQuest == true)
+				TutorialManager.instance.dQuest = true;
+		}
+
 		cameraRotation = new Vector3(cameraRotation.x + rotation.y, cameraRotation.y + rotation.x, cameraRotation.z);
 
 		if (EditorManager.instance.editorMode == false)
