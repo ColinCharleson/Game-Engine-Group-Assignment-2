@@ -7,6 +7,8 @@ public class MusicPlayer : MonoBehaviour
     public static MusicPlayer instance;
 
     public AudioSource BackgroundMusic;
+    public AudioClip musicOne;
+    public AudioClip musicTwo;
 
     private float musicVolume = 1f;
   
@@ -34,5 +36,15 @@ public class MusicPlayer : MonoBehaviour
         musicVolume = volume;
     }
 
+    public void chooseSongOne()
+	{
+        BackgroundMusic.clip = musicOne;
+        BackgroundMusic.Play();
+	}
+    public void chooseSongTwo()
+	{
+        BackgroundMusic.clip = musicTwo;
+        BackgroundMusic.Play();
+    }
 }
 
