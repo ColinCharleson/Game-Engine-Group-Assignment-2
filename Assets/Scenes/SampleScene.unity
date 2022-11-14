@@ -647,7 +647,7 @@ GameObject:
   - component: {fileID: 293541400}
   - component: {fileID: 293541399}
   m_Layer: 5
-  m_Name: Button (Legacy) (1)
+  m_Name: 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1154,7 +1154,7 @@ GameObject:
   - component: {fileID: 427490537}
   - component: {fileID: 427490536}
   m_Layer: 5
-  m_Name: Button (Legacy)
+  m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1377,7 +1377,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 969.06, y: 115.9}
+  m_AnchoredPosition: {x: 1797.17, y: 115.9}
   m_SizeDelta: {x: 1087, y: 564}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &557377301
@@ -1552,7 +1552,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 261.11, y: -15.73999}
+  m_AnchoredPosition: {x: 311.7, y: -15.73999}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &570128887
@@ -1687,8 +1687,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 443.5925, y: 152.75494}
-  m_SizeDelta: {x: -887.615, y: -305.2901}
+  m_AnchoredPosition: {x: 829.14246, y: 412.55493}
+  m_SizeDelta: {x: -1658.715, y: -824.89014}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &585728600
 MonoBehaviour:
@@ -2141,8 +2141,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 176.805, y: -163.40001}
-  m_SizeDelta: {x: -870.99, y: -324.61996}
+  m_AnchoredPosition: {x: 544.43506, y: -396.3449}
+  m_SizeDelta: {x: -1606.2501, y: -790.51013}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &802557428
 MonoBehaviour:
@@ -3277,8 +3277,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -453.005, y: 0}
-  m_SizeDelta: {x: -906.01, y: 0}
+  m_AnchoredPosition: {x: -854.305, y: 0}
+  m_SizeDelta: {x: -1708.61, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1202277225
 MonoBehaviour:
@@ -4888,7 +4888,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 90987c3e4d0c50a47bbfb8d81ef4345f, type: 3}
-  m_PlayOnAwake: 0
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
   Loop: 1
